@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 const app = express()
 app.use(express.json())
 
-const port = 8080;
+const port = 8000;
 const host = '192.168.2.11'; // Modifique para escutar em todas as interfaces de rede
 
 app.get('/temperatures', async (req, res) => {
