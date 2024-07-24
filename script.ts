@@ -32,6 +32,6 @@ app.post('/temperature', async (req, res) => {
     res.json(temp)
 });
 
-const server = app.listen(port, host, () => {
-    console.log(`Server running at http://${host}:${port}/`);
-});
+app.listen(port, () => {
+    console.log(`App is listening on port ${port}`)
+})
