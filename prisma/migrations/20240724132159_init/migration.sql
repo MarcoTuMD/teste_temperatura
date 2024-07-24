@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "Temperature" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "macAddress" TEXT NOT NULL,
+    "date" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "temperature" REAL NOT NULL
+);
