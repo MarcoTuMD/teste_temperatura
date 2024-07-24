@@ -32,6 +32,14 @@ app.post('/temperature', async (req, res) => {
     res.json(temp)
 });
 
+app.delete('/temperature/:id', async (req, res) => {
+    const { id } = req.params
+    const temp = await prisma.temperature.delete({
+        where: { id: parseInt(id) }
+    })
+    res.json(temp)
+});
+
 app.listen(port, () => {
     console.log(`App is listening on port ${port}`)
 })
